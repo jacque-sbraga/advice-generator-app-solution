@@ -6,7 +6,7 @@ const getAdvice = () => {
     fetch("https://api.adviceslip.com/advice").then((response) =>
       response.json().then((advice) => {
          adviceId.textContent = advice.slip.id;
-         adviceText.textContent = advice.slip.advice
+         adviceText.textContent = `“${advice.slip.advice}”`;
       })
     );
 }
